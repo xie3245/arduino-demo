@@ -1,4 +1,8 @@
 build
+build_uno
+build_lnx
+build_native
+slides
 
 # Prerequisites
 *.d
