@@ -1,15 +1,17 @@
+#include "demo.hxx"
 #include <avr/io.h>
 #include <util/delay.h>
 
-int main(int argc, char** argv)
+
+int main(int, char**)
 {
-    DDRB |= (1 << DDB5);
+    demo::OutputPin led(DDRB, PORTB, DDB5, PORTB5);
 
     while(1) {
-        PORTB |= (1 << PORTB5);
+        led.pin_high();
         _delay_ms(1000);
-        PORTB &= ~(1 << PORTB5);
-        _delay_ms(2000);
+        led.pin_low();
+        _delay_ms(1000);
     }
 
 	return 0;
