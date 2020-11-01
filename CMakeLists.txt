@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.1)
 option(ARDUINO "enable arduino build" OFF)
 
 if(${ARDUINO})
-  set(CMAKE_TOOLCHAIN_FILE cmake/toolchain/Toolchain-avr.cmake)
+  set(CMAKE_TOOLCHAIN_FILE cmake/toolchain/avr.cmake)
 endif()
 
 set(CMAKE_CXX_STANDARD 11)
